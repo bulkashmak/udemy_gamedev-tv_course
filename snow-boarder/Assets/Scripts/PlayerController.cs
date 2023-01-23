@@ -37,13 +37,7 @@ public class PlayerController : MonoBehaviour
 
     private void RespondToBoost()
     {
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            surfaceEffector2D.speed = boostSpeed;
-        }
-        else
-        {
-            surfaceEffector2D.speed = baseSpeed;
-        }
+        if (Input.GetKey(KeyCode.UpArrow)) surfaceEffector2D.speed = boostSpeed;
+        else surfaceEffector2D.speed = baseSpeed;
     }
 }
