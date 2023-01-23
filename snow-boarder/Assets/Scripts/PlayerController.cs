@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float baseSpeed = 20f;
     Rigidbody2D rb2d;
     SurfaceEffector2D surfaceEffector2D;
+    bool controlsEnabled = true;
 
     void Start()
     {
@@ -19,8 +20,16 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        RotatePlayer();
-        RespondToBoost();
+        if (controlsEnabled)
+        {
+            RotatePlayer();
+            RespondToBoost();
+        }
+    }
+
+    public void DisableControls()
+    {
+        controlsEnabled = false;
     }
 
     private void RotatePlayer()
