@@ -3,20 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CrashDetector : MonoBehaviour {
+public class CrashDetector : MonoBehaviour
+{
 
     [SerializeField] float loadSceneDelay = 0.5f;
     [SerializeField] ParticleSystem crashEffect;
 
-    void OnTriggerEnter2D(Collider2D other) {
+    void OnTriggerEnter2D(Collider2D other)
+    {
 
-        if (other.tag == "Ground") {
+        if (other.tag == "Ground")
+        {
             crashEffect.Play();
             Invoke("ReloadScene", loadSceneDelay);
         }
     }
 
-    void ReloadScene() {
+    void ReloadScene()
+    {
 
         SceneManager.LoadScene(0);
     }

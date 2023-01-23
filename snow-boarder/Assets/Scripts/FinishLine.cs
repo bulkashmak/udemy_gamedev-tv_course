@@ -3,20 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class FinishLine : MonoBehaviour {
+public class FinishLine : MonoBehaviour
+{
 
     [SerializeField] float loadSceneDelay = 1f;
     [SerializeField] ParticleSystem finishEffect;
 
-    void OnTriggerEnter2D(Collider2D other) {
+    void OnTriggerEnter2D(Collider2D other)
+    {
 
-        if (other.tag == "Player") {
+        if (other.tag == "Player")
+        {
             finishEffect.Play();
             Invoke("ReloadScene", loadSceneDelay);
         }
     }
 
-    void ReloadScene() {
+    void ReloadScene()
+    {
 
         SceneManager.LoadScene(0);
     }
