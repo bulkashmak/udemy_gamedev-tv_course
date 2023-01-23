@@ -13,21 +13,18 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-
         rb2d = GetComponent<Rigidbody2D>();
         surfaceEffector2D = FindObjectOfType<SurfaceEffector2D>();
     }
 
     void Update()
     {
-
         RotatePlayer();
         RespondToBoost();
     }
 
     private void RotatePlayer()
     {
-
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             rb2d.AddTorque(torqueAmmount);
@@ -40,7 +37,6 @@ public class PlayerController : MonoBehaviour
 
     private void RespondToBoost()
     {
-
         if (Input.GetKey(KeyCode.UpArrow))
         {
             surfaceEffector2D.speed = boostSpeed;

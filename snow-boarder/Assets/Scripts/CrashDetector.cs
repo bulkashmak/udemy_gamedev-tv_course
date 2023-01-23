@@ -10,7 +10,6 @@ public class CrashDetector : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-
         if (other.tag == "Ground")
         {
             crashEffect.Play();
@@ -20,7 +19,6 @@ public class CrashDetector : MonoBehaviour
 
     void ReloadScene()
     {
-
         SceneManager.LoadScene(0);
     }
 }

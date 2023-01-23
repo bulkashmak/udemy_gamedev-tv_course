@@ -10,7 +10,6 @@ public class FinishLine : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-
         if (other.tag == "Player")
         {
             finishEffect.Play();
@@ -20,7 +19,6 @@ public class FinishLine : MonoBehaviour
 
     void ReloadScene()
     {
-
         SceneManager.LoadScene(0);
     }
 }
