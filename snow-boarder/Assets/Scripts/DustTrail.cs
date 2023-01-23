@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DustTrail : MonoBehaviour
 {
-
     [SerializeField] ParticleSystem dustTrailEffect;
 
     private void OnCollisionEnter2D(Collision2D other)
