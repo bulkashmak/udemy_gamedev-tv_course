@@ -8,7 +8,7 @@ public class CrashDetector : MonoBehaviour
     [SerializeField] float loadSceneDelay = 0.5f;
     [SerializeField] ParticleSystem crashEffect;
     [SerializeField] AudioClip crashSFX;
-    bool hasCrashed = true;
+    bool hasCrashed = false;
 
     void OnTriggerEnter2D(Collider2D other)
     {
